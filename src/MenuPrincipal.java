@@ -17,7 +17,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         pantallaActual= new JFrame();
 
         this.setResizable(false);
-        getContentPane().setBackground(Color.orange);
+        getContentPane().setBackground(Color.GRAY);
     }
     
 
@@ -45,11 +45,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         setTitle("Menu Principal ");
         setForeground(new java.awt.Color(240, 240, 240));
 
-        btnPunto1.setBackground(new java.awt.Color(255, 204, 204));
+        btnPunto1.setBackground(new java.awt.Color(0, 153, 204));
         btnPunto1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        btnPunto1.setText("PUNTO A :Generación de números aleatorios");
+        btnPunto1.setText("PUNTO A : Generación de números aleatorios");
         btnPunto1.setToolTipText("Programa que genera una serie de 20 numeros aleatorios entre 0 y 9999 a apartir de un valor numerico");
-        btnPunto1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnPunto1.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         btnPunto1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPunto1ActionPerformed(evt);
@@ -63,22 +63,22 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setText("Integrantes: Dominguez Ariel, Figueroa Heber, Gudin Andres, Juarez Diego, Paglia Matias");
 
-        btnPunto2.setBackground(new java.awt.Color(255, 204, 204));
+        btnPunto2.setBackground(new java.awt.Color(0, 153, 204));
         btnPunto2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnPunto2.setText("PUNTO B : Chi Cuadrado nros. generados por lenguaje");
         btnPunto2.setToolTipText("Programa que genera una serie de 20 numeros aleatorios entre 0 y 9999 a apartir de un valor numerico");
-        btnPunto2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnPunto2.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         btnPunto2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPunto2ActionPerformed(evt);
             }
         });
 
-        btnPunto3.setBackground(new java.awt.Color(255, 204, 204));
+        btnPunto3.setBackground(new java.awt.Color(0, 153, 204));
         btnPunto3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         btnPunto3.setText("PUNTO C : Chi Cuadrado congruencial mixto");
         btnPunto3.setToolTipText("Programa que genera una serie de 20 numeros aleatorios entre 0 y 9999 a apartir de un valor numerico");
-        btnPunto3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnPunto3.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         btnPunto3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPunto3ActionPerformed(evt);
@@ -92,17 +92,23 @@ public class MenuPrincipal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnPunto2, javax.swing.GroupLayout.DEFAULT_SIZE, 552, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jLabel2))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 552, Short.MAX_VALUE)
-                        .addComponent(btnPunto1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel5)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(btnPunto3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 558, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnPunto3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(btnPunto1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(btnPunto2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -112,18 +118,18 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnPunto1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnPunto2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(95, 95, 95)
+                        .addGap(32, 32, 32)
                         .addComponent(jLabel5))
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnPunto2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(btnPunto3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(50, 50, 50)
+                .addGap(59, 59, 59)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 39, Short.MAX_VALUE))
+                .addGap(0, 24, Short.MAX_VALUE))
         );
 
         pack();

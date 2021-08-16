@@ -160,8 +160,8 @@ public class PantallaPuntoA extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Punto A");
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
-        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(null));
         jPanel1.setPreferredSize(new java.awt.Dimension(800, 650));
         jPanel1.setRequestFocusEnabled(false);
         jPanel1.setVerifyInputWhenFocusTarget(false);
@@ -302,7 +302,7 @@ public class PantallaPuntoA extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tablaNumerosGenerados);
 
-        btnGenerarNumeros.setBackground(new java.awt.Color(153, 255, 153));
+        btnGenerarNumeros.setBackground(new java.awt.Color(51, 204, 255));
         btnGenerarNumeros.setText("Generar numeros aleatorios");
         btnGenerarNumeros.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -443,7 +443,7 @@ public class PantallaPuntoA extends javax.swing.JFrame {
                                 .addComponent(listarHastaTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(desdeHastaButton)))))
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addContainerGap(7, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
