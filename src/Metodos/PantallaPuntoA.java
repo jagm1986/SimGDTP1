@@ -19,6 +19,7 @@ import org.jfree.data.category.DefaultCategoryDataset;
 public class PantallaPuntoA extends javax.swing.JFrame {
 
     private MetodoGeneracionRND metodo;
+    
     private ArrayList<Double> numerosGenerados;
     private int N;
     private ArrayList<Intervalo> filasTabla;
@@ -29,8 +30,6 @@ public class PantallaPuntoA extends javax.swing.JFrame {
 
         txtA.setEnabled(false);
         txtC.setEnabled(false);
-        txtG.setEnabled(false);
-        txtK.setEnabled(false);
         txtM.setEnabled(false);
         txtRaiz.setEnabled(false);
         proxVeinteButton.setEnabled(false);
@@ -39,12 +38,11 @@ public class PantallaPuntoA extends javax.swing.JFrame {
         hastaFinalButton.setEnabled(false);
         listarDesdeTxt.setEnabled(false);
         listarHastaTxt.setEnabled(false);
+        txtNumeroGeneraciones.setEnabled(false);
 
         lblA.setEnabled(false);
         lblC.setEnabled(false);
-        lblG.setEnabled(false);
         lblIngresoParametros.setEnabled(false);
-        lblK.setEnabled(false);
         lblM.setEnabled(false);
         lblRaiz.setEnabled(false);
         this.setLocationRelativeTo(null);
@@ -135,10 +133,6 @@ public class PantallaPuntoA extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         rdMixto = new javax.swing.JRadioButton();
         rdMultiplicativo = new javax.swing.JRadioButton();
-        lblG = new javax.swing.JLabel();
-        txtG = new javax.swing.JTextField();
-        lblK = new javax.swing.JLabel();
-        txtK = new javax.swing.JTextField();
         lblA = new javax.swing.JLabel();
         txtA = new javax.swing.JTextField();
         lblC = new javax.swing.JLabel();
@@ -214,39 +208,6 @@ public class PantallaPuntoA extends javax.swing.JFrame {
         rdMultiplicativo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rdMultiplicativoActionPerformed(evt);
-            }
-        });
-
-        lblG.setText("G");
-
-        txtG.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                txtGKeyPressed(evt);
-            }
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtGKeyReleased(evt);
-            }
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtGKeyTyped(evt);
-            }
-        });
-
-        lblK.setText("K");
-
-        txtK.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtKActionPerformed(evt);
-            }
-        });
-        txtK.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                txtKKeyPressed(evt);
-            }
-            public void keyReleased(java.awt.event.KeyEvent evt) {
-                txtKKeyReleased(evt);
-            }
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtKKeyTyped(evt);
             }
         });
 
@@ -371,7 +332,6 @@ public class PantallaPuntoA extends javax.swing.JFrame {
         });
 
         proxButton.setText("Listar proximo");
-        proxButton.setActionCommand("Listar proximo");
         proxButton.setName("ProxVeinte"); // NOI18N
         proxButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -437,17 +397,7 @@ public class PantallaPuntoA extends javax.swing.JFrame {
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(lblA)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(txtA, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(116, 116, 116)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(lblG)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(txtG, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(lblK)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(txtK, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(txtA, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(1, 1, 1)
                                         .addComponent(lblRaiz)
@@ -512,13 +462,9 @@ public class PantallaPuntoA extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblRaiz)
-                    .addComponent(txtRaiz, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblK)
-                    .addComponent(txtK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtRaiz, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblG)
-                    .addComponent(txtG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblA)
                     .addComponent(txtA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -558,7 +504,7 @@ public class PantallaPuntoA extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 676, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -754,92 +700,6 @@ public class PantallaPuntoA extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtAActionPerformed
 
-    private void txtKKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtKKeyTyped
-
-        String textoPrevio = txtK.getText();
-        char caracterIngresado = evt.getKeyChar();
-
-        if (!Character.isDigit(caracterIngresado)) {
-            evt.consume();
-            txtK.setText(textoPrevio);
-        }
-    }//GEN-LAST:event_txtKKeyTyped
-
-    private void txtKKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtKKeyReleased
-        int valorK = 0;
-        try {
-
-            valorK = Integer.parseInt(txtK.getText());
-
-            int nuevoValorA = 0;
-            if (rdMixto.isSelected()) {
-                nuevoValorA = 1 + (4 * valorK);
-            }
-            if (rdMultiplicativo.isSelected()) {
-                nuevoValorA = 3 + (8 * valorK);
-            }
-
-            txtA.setText(Integer.toString(nuevoValorA));
-        } catch (Exception E) {
-            txtA.setText("");
-        }
-    }//GEN-LAST:event_txtKKeyReleased
-
-    private void txtKKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtKKeyPressed
-
-    }//GEN-LAST:event_txtKKeyPressed
-
-    private void txtKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtKActionPerformed
-
-    }//GEN-LAST:event_txtKActionPerformed
-
-    private void txtGKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtGKeyTyped
-
-        String textoPrevio = txtG.getText();
-        char caracterIngresado = evt.getKeyChar();
-
-        if (!Character.isDigit(caracterIngresado)) {
-            evt.consume();
-            txtG.setText(textoPrevio);
-        }
-    }//GEN-LAST:event_txtGKeyTyped
-
-    private void txtGKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtGKeyReleased
-
-        int valorG = 0;
-        try {
-
-            valorG = Integer.parseInt(txtG.getText());
-
-            double gDouble = (double) valorG;
-            int nuevoValorM = (int) Math.pow(2, gDouble);
-
-            txtM.setText(Integer.toString(nuevoValorM));
-        } catch (Exception E) {
-            txtM.setText("");
-        }
-    }//GEN-LAST:event_txtGKeyReleased
-
-    private void txtGKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtGKeyPressed
-        //            int g=0,m,c,a;
-        //       if(evt.getKeyCode() >= 49 && evt.getKeyCode()<=57 )
-        //       {
-            //          try
-            //        {
-                //          g = Integer.parseInt(txtG.getText());
-                //
-                //        }catch(NumberFormatException ex)
-            //        {
-                //
-                //        }
-            //
-            //       m=(int)Math.pow(2, g);
-            //       txtM.setText(" "+m);
-            //
-            //       }
-        //
-    }//GEN-LAST:event_txtGKeyPressed
-
     private void rdMultiplicativoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rdMultiplicativoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_rdMultiplicativoActionPerformed
@@ -848,16 +708,15 @@ public class PantallaPuntoA extends javax.swing.JFrame {
 
         txtA.setEnabled(true);
         txtC.setEnabled(false);
-        txtG.setEnabled(true);
-        txtK.setEnabled(true);
+       
         txtM.setEnabled(true);
         txtRaiz.setEnabled(true);
 
         lblA.setEnabled(true);
         lblC.setEnabled(false);
-        lblG.setEnabled(true);
+       
         lblIngresoParametros.setEnabled(true);
-        lblK.setEnabled(true);
+
         lblM.setEnabled(true);
         lblRaiz.setEnabled(true);
 
@@ -870,8 +729,6 @@ public class PantallaPuntoA extends javax.swing.JFrame {
         if (!rdMultiplicativo.isSelected()) {
             txtA.setText("");
             txtC.setText("");
-            txtG.setText("");
-            txtK.setText("");
             txtM.setText("");
             txtRaiz.setText("");
         }
@@ -893,16 +750,14 @@ public class PantallaPuntoA extends javax.swing.JFrame {
 
         txtA.setEnabled(true);
         txtC.setEnabled(true);
-        txtG.setEnabled(true);
-        txtK.setEnabled(true);
+
         txtM.setEnabled(true);
         txtRaiz.setEnabled(true);
 
         lblA.setEnabled(true);
         lblC.setEnabled(true);
-        lblG.setEnabled(true);
+
         lblIngresoParametros.setEnabled(true);
-        lblK.setEnabled(true);
         lblM.setEnabled(true);
         //lblParametrosAdicionales.setEnabled(true);
         //lblParametrosEsenciales.setEnabled(true);
@@ -917,8 +772,6 @@ public class PantallaPuntoA extends javax.swing.JFrame {
         if (!rdMixto.isSelected()) {
             txtA.setText("");
             txtC.setText("");
-            txtG.setText("");
-            txtK.setText("");
             txtM.setText("");
             txtRaiz.setText("");
         }
@@ -1146,9 +999,7 @@ public class PantallaPuntoA extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblA;
     private javax.swing.JLabel lblC;
-    private javax.swing.JLabel lblG;
     private javax.swing.JLabel lblIngresoParametros;
-    private javax.swing.JLabel lblK;
     private javax.swing.JLabel lblM;
     private javax.swing.JLabel lblRaiz;
     private javax.swing.JTextField listarDesdeTxt;
@@ -1160,8 +1011,6 @@ public class PantallaPuntoA extends javax.swing.JFrame {
     private javax.swing.JTable tablaNumerosGenerados;
     private javax.swing.JTextField txtA;
     private javax.swing.JTextField txtC;
-    private javax.swing.JTextField txtG;
-    private javax.swing.JTextField txtK;
     private javax.swing.JTextField txtM;
     private javax.swing.JTextField txtNumeroGeneraciones;
     private javax.swing.JTextField txtRaiz;

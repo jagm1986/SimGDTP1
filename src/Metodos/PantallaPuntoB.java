@@ -22,6 +22,7 @@ public class PantallaPuntoB extends javax.swing.JFrame {
     private ArrayList<Double> numerosGenerados;
     private int N;
     private ArrayList<Intervalo> filasTabla;
+    
 
     public PantallaPuntoB() {
         initComponents();

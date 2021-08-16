@@ -15,6 +15,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         this.setResizable(false);
         getContentPane().setBackground(Color.orange);
     }
+    
 
     /*private void cargarImagen()
     {   
