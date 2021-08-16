@@ -656,11 +656,15 @@ public class PantallaPuntoA extends javax.swing.JFrame {
         if (!Character.isDigit(caracterIngresado)) {
             evt.consume();
             txtRaiz.setText(textoPrevio);
+            
+            
         }
     }//GEN-LAST:event_txtRaizKeyTyped
 
     private void txtRaizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRaizActionPerformed
         // TODO add your handling code here:
+        
+        
     }//GEN-LAST:event_txtRaizActionPerformed
 
     private void txtMKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMKeyTyped
