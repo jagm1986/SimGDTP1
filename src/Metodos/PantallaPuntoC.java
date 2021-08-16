@@ -491,14 +491,14 @@ public class PantallaPuntoC extends javax.swing.JFrame {
 
             }
             double rnd = 0;
-            int a = 0, c = 0, m = 0, x = 0, n = 0;
+            long a = 0, c = 0, m = 0, x = 0, n = 0;
             numerosGenerados = new ArrayList<Double>();
             try {
-                a = Integer.parseInt(txtA.getText());
-                x = Integer.parseInt(txtRaiz.getText());
-                m = Integer.parseInt(txtM.getText());
-                c = Integer.parseInt(txtC.getText());
-                n = Integer.parseInt(txtNumeroGeneraciones.getText());
+               a = Long.parseLong(txtA.getText());
+                x = Long.parseLong(txtRaiz.getText());
+                m = Long.parseLong(txtM.getText());
+                c = Long.parseLong(txtC.getText());
+                n = Long.parseLong(txtNumeroGeneraciones.getText());
             } catch (NumberFormatException e) {
             }
 

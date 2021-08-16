@@ -3,17 +3,17 @@ package Metodos;
 public class MetodoMultiplicativo extends MetodoGeneracionRND
 {
   
-    public MetodoMultiplicativo(int x0Ingresado)
+    public MetodoMultiplicativo(long x0Ingresado)
     {
         super(x0Ingresado);
     }
     
-    public double generarNumeroAleatorio(int a, int c, int m)
+    public double generarNumeroAleatorio(long a, long c, long m)
     {
         
-        int aXi = (a*xi);
+        long aXi = (a*xi);
                 
-        int xsiguiente = (aXi % m);
+        long xsiguiente = (aXi % m);
         
         
         double resultado = 0;

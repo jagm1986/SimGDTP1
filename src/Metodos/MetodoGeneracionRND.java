@@ -5,14 +5,14 @@ package Metodos;
 public abstract class MetodoGeneracionRND {
 
        
-  protected int xi;
+  protected long xi;
 
     
-    public MetodoGeneracionRND(int x0)
+    public MetodoGeneracionRND(long x0)
     {
         xi= x0;
     }
   
-    public abstract double generarNumeroAleatorio(int aIngresado, int cIngresado, int mIngresado);
+    public abstract double generarNumeroAleatorio(long aIngresado, long cIngresado, long mIngresado);
     
 }
