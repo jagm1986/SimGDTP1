@@ -31,7 +31,7 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="jPanel1" min="-2" pref="1074" max="-2" attributes="0"/>
+              <Component id="jPanel1" min="-2" pref="1023" max="-2" attributes="0"/>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -39,8 +39,8 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="jPanel1" min="-2" pref="453" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Component id="jPanel1" min="-2" pref="531" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="43" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -68,48 +68,80 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txtNumeroGeneraciones" min="-2" pref="160" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="jLabel3" min="-2" pref="55" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="txtIntervalos" min="-2" pref="160" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="lblA" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="txtA" min="-2" pref="53" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                                  <Component id="lblRaiz" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="txtRaiz" min="-2" pref="54" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="lblM" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="txtM" min="-2" pref="52" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="lblC" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="txtC" min="-2" pref="53" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="btnCargarTablaIntervalos" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="btnGraficar" min="-2" max="-2" attributes="0"/>
+                                  <Component id="cmbSignificancia" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="btnPruebaJi" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Component id="cmbSignificancia" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="btnPruebaJi" min="-2" max="-2" attributes="0"/>
+                                      <Component id="txtNumeroGeneraciones" min="-2" pref="160" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="jScrollPane3" min="-2" pref="517" max="-2" attributes="0"/>
+                                  <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="jLabel3" min="-2" pref="55" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="txtIntervalos" min="-2" pref="160" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="btnCargarTablaIntervalos" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="301" max="-2" attributes="0"/>
+                                          <Component id="btnGraficar" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Component id="jScrollPane3" alignment="0" min="-2" pref="517" max="-2" attributes="0"/>
                               </Group>
                           </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="lblResultadoPrueba" min="-2" pref="402" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="64" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="lblResultadoPrueba" min="-2" pref="402" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="29" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Component id="lblResultadoPrueba" min="-2" pref="43" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="136" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="txtNumeroGeneraciones" alignment="0" min="-2" pref="20" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -120,22 +152,42 @@
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblRaiz" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtRaiz" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblA" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtA" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblM" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtM" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="lblC" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtC" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="btnCargarTablaIntervalos" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="btnGraficar" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jScrollPane3" min="-2" pref="264" max="-2" attributes="0"/>
+                              <Component id="jScrollPane1" min="-2" pref="264" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jScrollPane3" min="-2" pref="264" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="btnPruebaJi" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cmbSignificancia" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
-                      <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btnPruebaJi" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="cmbSignificancia" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="32767" attributes="0"/>
-                  <Component id="lblResultadoPrueba" min="-2" pref="43" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="433" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -194,14 +246,12 @@
         <Component class="javax.swing.JComboBox" name="cmbSignificancia">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="7">
-                <StringItem index="0" value="0.001"/>
-                <StringItem index="1" value="0.0025"/>
-                <StringItem index="2" value="0.90"/>
-                <StringItem index="3" value="0.95"/>
-                <StringItem index="4" value="0.975"/>
-                <StringItem index="5" value="0.99"/>
-                <StringItem index="6" value="0.995"/>
+              <StringArray count="5">
+                <StringItem index="0" value="0.90"/>
+                <StringItem index="1" value="0.95"/>
+                <StringItem index="2" value="0.975"/>
+                <StringItem index="3" value="0.99"/>
+                <StringItem index="4" value="0.995"/>
               </StringArray>
             </Property>
           </Properties>
@@ -251,6 +301,49 @@
             </Component>
           </SubComponents>
         </Container>
+        <Component class="javax.swing.JTextField" name="txtRaiz">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtRaizActionPerformed"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtRaizKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblRaiz">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="X0"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblA">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="A"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtA">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAActionPerformed"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtAKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblM">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="M"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtM">
+          <Events>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtMKeyTyped"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblC">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="C"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtC">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCActionPerformed"/>
+            <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtCKeyTyped"/>
+          </Events>
+        </Component>
       </SubComponents>
     </Container>
   </SubComponents>

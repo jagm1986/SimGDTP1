@@ -1,4 +1,5 @@
 package Metodos;
+import org.apache.commons.math3.distribution.ChiSquaredDistribution;
 
 public class CalculadorJiCuadrado {
 
@@ -19,43 +20,17 @@ public class CalculadorJiCuadrado {
     }
 
     
-    public boolean superaPrueba(int gradosLibertad, double estadistico, int significancia)
+    public boolean superaPrueba(int gradosLibertad, double estadistico, double significancia)
     {
         boolean resultado = false;
         double[] columnaATrabajar = null;
         
+      
         
-        switch (significancia)
-        {
-            case 950:
-                columnaATrabajar = valores095;
-                break;
-            
-            case 995:
-                columnaATrabajar = valores0995;
-                break;
-                
-            case 990:
-                columnaATrabajar = valores099;
-                break;
-                
-            case 975:
-                columnaATrabajar = valores0975;
-                break;
-                
-            case 900:
-                columnaATrabajar = valores090;
-                break;
-        } 
+        double valorReferencia = 0;
         
-        int posicion = 0;
-        
-        if(gradosLibertad == 9) posicion = 0;
-        if(gradosLibertad == 14) posicion = 1;
-        if(gradosLibertad == 19) posicion = 2;
-        
-        double valorReferencia = columnaATrabajar[posicion];
-        
+        ChiSquaredDistribution csd = new ChiSquaredDistribution((double)gradosLibertad);
+        valorReferencia = csd.inverseCumulativeProbability((double)significancia);
         System.out.println("Valor de referencia: " + valorReferencia);
         System.out.println("Estadistico recibido: " + estadistico);
         
