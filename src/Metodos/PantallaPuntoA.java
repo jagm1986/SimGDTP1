@@ -52,78 +52,8 @@ public class PantallaPuntoA extends javax.swing.JFrame {
 
     }
 
-    /*private int cantidadIntervalos() {
-        int cantIntervalos = 0;
-        if (rdIntervalo10.isSelected()) {
-            cantIntervalos = 10;
-        }
-        if (rdIntervalo15.isSelected()) {
-            cantIntervalos = 15;
-        }
-        if (rdIntervalo20.isSelected()) {
-            cantIntervalos = 20;
-        }
+    
 
-        return cantIntervalos;
-    }*/
-
-   // private void crearIntervalos() {
-    //    int cantIntervalos = cantidadIntervalos();
-    //    filasTabla = new ArrayList<>(cantIntervalos);
-
-    //    float yi = 0;
-
-     //   int tamañoMuestra = Integer.parseInt(txtNumeroGeneraciones.getText());
-
-     //   float frecuenciaEsperadaPorIntervalo = tamañoMuestra / cantIntervalos;
-
-      //  for (int i = 0; i < cantIntervalos; i++) {
-       //     Intervalo aux = new Intervalo(yi, yi + (1f / (float) cantIntervalos), frecuenciaEsperadaPorIntervalo);
-
-            /*if (i == 14)
-            {
-                double aux2 = 1.1;
-                aux = new Intervalo(yi, aux2 , frecuenciaEsperadaPorIntervalo);
-            }*/
-            
-     //       filasTabla.add(aux);
-  
-       //     yi += (1f / (float) cantIntervalos);
-            
-      //  }
-        
-
- //   }
-
-
- /*   private void cargarGrillaManual() {
-        Object[][] matrizTabla = new Object[filasTabla.size() + 1][5];
-        int i = 0;
-        double acumuladorFrecuenciaObservada = 0, acumuladorEstadistico = 0;
-        for (Intervalo intervaloActual : filasTabla) {
-            intervaloActual.generarEstadistico();
-            matrizTabla[i][0] = intervaloActual.nombreIntervalo();// fila i columna intervalo
-            matrizTabla[i][1] = intervaloActual.getFrecuenciaObservada();// fila i columna frecuencia observada
-            matrizTabla[i][2] = intervaloActual.getFrecuenciaEsperada();// fila i columna frecuencia esperada
-            matrizTabla[i][3] = intervaloActual.getEstadistico();//fila i columna estadistico
-            acumuladorEstadistico += intervaloActual.getEstadistico();
-            intervaloActual.setValorEstadisticoAcumulado(acumuladorEstadistico);
-            matrizTabla[i][4] = intervaloActual.getValorEstadisticoAcumulado();
-            acumuladorFrecuenciaObservada += intervaloActual.getFrecuenciaObservada();;
-
-            i++;
-        }
-        matrizTabla[i][0] = "Total";
-        matrizTabla[i][1] = acumuladorFrecuenciaObservada;
-        matrizTabla[i][2] = acumuladorFrecuenciaObservada;
-        matrizTabla[i][3] = acumuladorEstadistico;
-        matrizTabla[i][4] = acumuladorEstadistico;
-        String[] NombresDeColumnas = new String[]{"Intervalo", "Frecuencia observada", "Frecuencia esperada", "Estadístico de la prueba", "Estadistico Acumulado"};
-
-        tablaFrecuencia.setModel(new DefaultTableModel(matrizTabla, NombresDeColumnas));
-
-    }
-*/
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -518,13 +448,7 @@ public class PantallaPuntoA extends javax.swing.JFrame {
 
     private void btnGenerarNumerosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerarNumerosActionPerformed
 
-        /*if (rdLenguaje.isSelected()) {
-            if (txtNumeroGeneraciones.getText().trim().equals("")) {
-                JOptionPane.showMessageDialog(new JFrame(), "Debe ingresar un valor para cada parámetro esencial", "Parámetros insuficientes", JOptionPane.WARNING_MESSAGE);
-                txtM.requestFocus();
-                return;
-            }
-        } else {*/
+      
 
             if (txtRaiz.getText().trim().equals("")) {
                 JOptionPane.showMessageDialog(new JFrame(), "Debe ingresar un valor para cada parámetro esencial", "Parámetros insuficientes", JOptionPane.WARNING_MESSAGE);
@@ -559,14 +483,14 @@ public class PantallaPuntoA extends javax.swing.JFrame {
 
             }
 
-            int a = 0, c = 0, m = 0, x = 0, n = 0;
+            long a = 0, c = 0, m = 0, x = 0, n = 0;
             numerosGenerados = new ArrayList<Double>();
             try {
-                a = Integer.parseInt(txtA.getText());
-                x = Integer.parseInt(txtRaiz.getText());
-                m = Integer.parseInt(txtM.getText());
-                c = Integer.parseInt(txtC.getText());
-                n = Integer.parseInt(txtNumeroGeneraciones.getText());
+                a = Long.parseLong(txtA.getText());
+                x = Long.parseLong(txtRaiz.getText());
+                m = Long.parseLong(txtM.getText());
+                c = Long.parseLong(txtC.getText());
+                n = Long.parseLong(txtNumeroGeneraciones.getText());
             } catch (NumberFormatException e) {
             }
 
@@ -602,26 +526,18 @@ public class PantallaPuntoA extends javax.swing.JFrame {
                 // provisorio por alguna razon.
             }
 
-            /*if (rdLenguaje.isSelected()) {
-                n = Integer.parseInt(txtNumeroGeneraciones.getText());
-            }*/
-
+          
             GeneradorNumerosAleatorios gnd = new GeneradorNumerosAleatorios();
 
             boolean considerarUno = false;
 
             double rnd;
             for (int i = 0; i < n; i++) {
-                //System.out.println(n);
-
-                /*if (rdLenguaje.isSelected()) {
-                    rnd = Math.random();
-                } else {*/
+               
                     rnd = gnd.generarAleatorioUniforme(0, 1, metodo, a, c, m);
 
                     rnd = (double) Math.round(rnd * 10000d) / 10000d;
                     numerosGenerados.add(rnd);
-
                 }
             desdeHastaButton.setEnabled(true);
             listarDesdeTxt.setEnabled(true);
@@ -761,8 +677,7 @@ public class PantallaPuntoA extends javax.swing.JFrame {
 
         lblIngresoParametros.setEnabled(true);
         lblM.setEnabled(true);
-        //lblParametrosAdicionales.setEnabled(true);
-        //lblParametrosEsenciales.setEnabled(true);
+     
         lblRaiz.setEnabled(true);
 
         btnGenerarNumeros.setEnabled(true);
