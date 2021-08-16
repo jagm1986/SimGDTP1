@@ -18,7 +18,7 @@ import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.renderer.category.BarRenderer;
 import org.jfree.data.category.DefaultCategoryDataset;
 
-public class PantallaPuntoB extends javax.swing.JFrame {
+public class PantallaPuntoC extends javax.swing.JFrame {
 
     private MetodoGeneracionRND metodo;
     private ArrayList<Double> numerosGenerados;
@@ -26,7 +26,7 @@ public class PantallaPuntoB extends javax.swing.JFrame {
     private ArrayList<Intervalo> filasTabla;
     
 
-    public PantallaPuntoB() {
+    public PantallaPuntoC() {
         initComponents();
         numerosGenerados = new ArrayList<>();
 
@@ -57,12 +57,7 @@ public class PantallaPuntoB extends javax.swing.JFrame {
         for (int i = 0; i < cantIntervalos; i++) {
             Intervalo aux = new Intervalo(yi, yi + (1f / (float) cantIntervalos), frecuenciaEsperadaPorIntervalo);
 
-            /*if (i == 14)
-            {
-                double aux2 = 1.1;
-                aux = new Intervalo(yi, aux2 , frecuenciaEsperadaPorIntervalo);
-            }*/
-            
+         
             filasTabla.add(aux);
   
             yi += (1f / (float) cantIntervalos);
@@ -120,6 +115,14 @@ public class PantallaPuntoB extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tablaNumerosGenerados = new javax.swing.JTable();
+        txtRaiz = new javax.swing.JTextField();
+        lblRaiz = new javax.swing.JLabel();
+        lblA = new javax.swing.JLabel();
+        txtA = new javax.swing.JTextField();
+        lblM = new javax.swing.JLabel();
+        txtM = new javax.swing.JTextField();
+        lblC = new javax.swing.JLabel();
+        txtC = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Punto A");
@@ -178,7 +181,7 @@ public class PantallaPuntoB extends javax.swing.JFrame {
             }
         });
 
-        cmbSignificancia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0.001", "0.0025", "0.90", "0.95", "0.975", "0.99", "0.995" }));
+        cmbSignificancia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0.90", "0.95", "0.975", "0.99", "0.995" }));
         cmbSignificancia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbSignificanciaActionPerformed(evt);
@@ -244,6 +247,53 @@ public class PantallaPuntoB extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tablaNumerosGenerados);
 
+        txtRaiz.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtRaizActionPerformed(evt);
+            }
+        });
+        txtRaiz.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtRaizKeyTyped(evt);
+            }
+        });
+
+        lblRaiz.setText("X0");
+
+        lblA.setText("A");
+
+        txtA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAActionPerformed(evt);
+            }
+        });
+        txtA.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtAKeyTyped(evt);
+            }
+        });
+
+        lblM.setText("M");
+
+        txtM.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtMKeyTyped(evt);
+            }
+        });
+
+        lblC.setText("C");
+
+        txtC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCActionPerformed(evt);
+            }
+        });
+        txtC.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCKeyTyped(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -252,37 +302,62 @@ public class PantallaPuntoB extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtNumeroGeneraciones, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(txtIntervalos, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(btnCargarTablaIntervalos)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnGraficar))
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(lblA)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtA, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addComponent(lblRaiz)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtRaiz, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(lblM)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtM, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(lblC)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtC, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(cmbSignificancia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnPruebaJi))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(cmbSignificancia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel2)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(btnPruebaJi))
-                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 517, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblResultadoPrueba, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(29, Short.MAX_VALUE))
+                                    .addComponent(txtNumeroGeneraciones, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txtIntervalos, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(btnCargarTablaIntervalos)
+                                        .addGap(301, 301, 301)
+                                        .addComponent(btnGraficar)))
+                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 517, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblResultadoPrueba, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(lblResultadoPrueba, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(136, 136, 136))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtNumeroGeneraciones, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -291,18 +366,33 @@ public class PantallaPuntoB extends javax.swing.JFrame {
                                 .addComponent(jLabel3)))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblRaiz)
+                            .addComponent(txtRaiz, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblA)
+                            .addComponent(txtA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblM)
+                            .addComponent(txtM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblC)
+                            .addComponent(txtC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnCargarTablaIntervalos)
                             .addComponent(btnGraficar))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnPruebaJi)
-                    .addComponent(cmbSignificancia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblResultadoPrueba, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(433, 433, 433))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnPruebaJi)
+                            .addComponent(cmbSignificancia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -310,14 +400,14 @@ public class PantallaPuntoB extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1074, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1023, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 453, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 531, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 43, Short.MAX_VALUE))
         );
 
         pack();
@@ -372,19 +462,86 @@ public class PantallaPuntoB extends javax.swing.JFrame {
 
         
         this.crearIntervalos();
-        N = Integer.parseInt(txtNumeroGeneraciones.getText());
-        double rnd = 0;
-        numerosGenerados = new ArrayList<Double>();
-        for (int i = 0; i < N; i++) {
-            numerosGenerados.add(Math.random());
-        }
-        
-       /* if(Integer.parseInt(txtNumeroGeneraciones.getText())< Integer.parseInt(txtIntervalos.getText())){
-        JOptionPane.showMessageDialog(new JFrame(), "El valor de 'n' no puede ser menor a el numero de intervalos", "Parámetro incorrecto", JOptionPane.WARNING_MESSAGE);
-                txtNumeroGeneraciones.requestFocus();
+       
+      
+            if (txtRaiz.getText().trim().equals("")) {
+                JOptionPane.showMessageDialog(new JFrame(), "Debe ingresar un valor para cada parámetro esencial", "Parámetros insuficientes", JOptionPane.WARNING_MESSAGE);
+                txtRaiz.requestFocus();
                 return;
-        }*/
+            }
+
+            if (txtA.getText().trim().equals("") ) {
+                JOptionPane.showMessageDialog(new JFrame(), "Debe ingresar un valor para cada parámetro esencial", "Parámetros insuficientes", JOptionPane.WARNING_MESSAGE);
+                txtA.requestFocus();
+                return;
+            }
+
+          
+
+            if (txtM.getText().trim().equals("")) {
+                JOptionPane.showMessageDialog(new JFrame(), "Debe ingresar un valor para cada parámetro esencial", "Parámetros insuficientes", JOptionPane.WARNING_MESSAGE);
+                txtM.requestFocus();
+                return;
+            }
+
+            if (txtNumeroGeneraciones.getText().trim().equals("")) {
+                JOptionPane.showMessageDialog(new JFrame(), "Debe ingresar un valor para cada parámetro esencial", "Parámetros insuficientes", JOptionPane.WARNING_MESSAGE);
+                txtM.requestFocus();
+                return;
+
+            }
+            double rnd = 0;
+            int a = 0, c = 0, m = 0, x = 0, n = 0;
+            numerosGenerados = new ArrayList<Double>();
+            try {
+                a = Integer.parseInt(txtA.getText());
+                x = Integer.parseInt(txtRaiz.getText());
+                m = Integer.parseInt(txtM.getText());
+                c = Integer.parseInt(txtC.getText());
+                n = Integer.parseInt(txtNumeroGeneraciones.getText());
+            } catch (NumberFormatException e) {
+            }
+
+            //Validaciones para 𝑎∈ℤ, 1≤𝑎≤𝑚, 𝑥0∈ℤ, 0≤𝑥0≤𝑚−1, 𝑐∈ℤ, 0≤𝑐≤𝑚, 𝑚∈ℤ.
+            if (a<1 || a>m){
+                JOptionPane.showMessageDialog(new JFrame(), "El valor de 'a' no puede ser menor a 1 o mayor a m", "Parámetro incorrecto", JOptionPane.WARNING_MESSAGE);
+                txtA.requestFocus();
+                return;
+            }
+
+            if(x<0 || x>m-1)
+            {
+                JOptionPane.showMessageDialog(new JFrame(), "El valor de la semilla 'x' no puede ser menor a 0 o mayor a m-1", "Parámetro incorrecto", JOptionPane.WARNING_MESSAGE);
+                txtRaiz.requestFocus();
+                return;
+            }
+
+            if(c<0 || x>m)
+            {
+                JOptionPane.showMessageDialog(new JFrame(), "El valor de la semilla 'c' no puede ser menor a 0 o mayor a m", "Parámetro incorrecto", JOptionPane.WARNING_MESSAGE);
+                txtC.requestFocus();
+                return;
+            }
+
         
+     
+       metodo = new MetodoMixto(x);
+       
+         GeneradorNumerosAleatorios gnd = new GeneradorNumerosAleatorios();
+         double rndTwo;
+            for (int i = 0; i < n; i++) {
+                //System.out.println(n);
+
+                /*if (rdLenguaje.isSelected()) {
+                    rnd = Math.random();
+                } else {*/
+                    rndTwo = gnd.generarAleatorioUniforme(0, 1, metodo, a, c, m);
+
+                    rndTwo = (double) Math.round(rndTwo * 10000d) / 10000d;
+                    numerosGenerados.add(rndTwo);
+
+                }
+       
         for (int i = 0; i < numerosGenerados.size(); i++) {
             rnd = numerosGenerados.get(i);
             for (Intervalo intervaloActual : filasTabla) {
@@ -460,6 +617,63 @@ public class PantallaPuntoB extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtIntervalosActionPerformed
 
+    private void txtRaizActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRaizActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_txtRaizActionPerformed
+
+    private void txtRaizKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtRaizKeyTyped
+
+        String textoPrevio = txtRaiz.getText();
+        char caracterIngresado = evt.getKeyChar();
+
+        if (!Character.isDigit(caracterIngresado)) {
+            evt.consume();
+
+            txtRaiz.setText(textoPrevio);
+        }
+    }//GEN-LAST:event_txtRaizKeyTyped
+
+    private void txtAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAActionPerformed
+
+    private void txtAKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAKeyTyped
+
+        String textoPrevio = txtA.getText();
+        char caracterIngresado = evt.getKeyChar();
+
+        if (!Character.isDigit(caracterIngresado)) {
+            evt.consume();
+            txtA.setText(textoPrevio);
+        }
+    }//GEN-LAST:event_txtAKeyTyped
+
+    private void txtMKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMKeyTyped
+
+        String textoPrevio = txtM.getText();
+        char caracterIngresado = evt.getKeyChar();
+        if (!Character.isDigit(caracterIngresado)) {
+            evt.consume();
+            txtM.setText(textoPrevio);
+        }
+    }//GEN-LAST:event_txtMKeyTyped
+
+    private void txtCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCActionPerformed
+
+    private void txtCKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCKeyTyped
+
+        String textoPrevio = txtC.getText();
+        char caracterIngresado = evt.getKeyChar();
+
+        if (!Character.isDigit(caracterIngresado)) {
+            evt.consume();
+            txtC.setText(textoPrevio);
+        }
+    }//GEN-LAST:event_txtCKeyTyped
+
     /**
      * @param args the command line arguments
      */
@@ -508,10 +722,18 @@ public class PantallaPuntoB extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JLabel lblA;
+    private javax.swing.JLabel lblC;
+    private javax.swing.JLabel lblM;
+    private javax.swing.JLabel lblRaiz;
     private javax.swing.JLabel lblResultadoPrueba;
     private javax.swing.JTable tablaFrecuencia;
     private javax.swing.JTable tablaNumerosGenerados;
+    private javax.swing.JTextField txtA;
+    private javax.swing.JTextField txtC;
     private javax.swing.JTextField txtIntervalos;
+    private javax.swing.JTextField txtM;
     private javax.swing.JTextField txtNumeroGeneraciones;
+    private javax.swing.JTextField txtRaiz;
     // End of variables declaration//GEN-END:variables
 }
