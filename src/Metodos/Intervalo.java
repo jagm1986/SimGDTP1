@@ -9,7 +9,7 @@ public class Intervalo
     private double valorInicio;
     private double valorFin;
     private int frecuenciaObservada ;
-    private float frecuenciaEsperada;
+    private double frecuenciaEsperada;
     private double valorEstadistico;
     private double valorEstadisticoAcumulado;
 
@@ -22,7 +22,7 @@ public class Intervalo
     }
     
         
-    public Intervalo(double valorInicio, double valorFin, float frecuenciaEsperadaCalculada) {
+    public Intervalo(double valorInicio, double valorFin, double frecuenciaEsperadaCalculada) {
         this.valorInicio = valorInicio;
         this.valorFin = valorFin;
         frecuenciaObservada=0;
@@ -76,7 +76,7 @@ public class Intervalo
         return frecuenciaObservada;
     }
     
-    public float getFrecuenciaEsperada() 
+    public double getFrecuenciaEsperada() 
     {
         return frecuenciaEsperada;
     } 

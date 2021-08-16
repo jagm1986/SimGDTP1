@@ -52,7 +52,7 @@ public class TablaNumerosIntervalos extends AbstractTableModel
                     break;
                 
                 case 2:
-                    res = Float.toString(aux.getFrecuenciaEsperada());
+                    res = Double.toString(aux.getFrecuenciaEsperada());
                     break;
                     
                 case 3:
