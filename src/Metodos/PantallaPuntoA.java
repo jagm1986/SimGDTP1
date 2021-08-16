@@ -655,9 +655,8 @@ public class PantallaPuntoA extends javax.swing.JFrame {
 
         if (!Character.isDigit(caracterIngresado)) {
             evt.consume();
+            
             txtRaiz.setText(textoPrevio);
-            
-            
         }
     }//GEN-LAST:event_txtRaizKeyTyped
 
@@ -671,7 +670,6 @@ public class PantallaPuntoA extends javax.swing.JFrame {
 
         String textoPrevio = txtM.getText();
         char caracterIngresado = evt.getKeyChar();
-
         if (!Character.isDigit(caracterIngresado)) {
             evt.consume();
             txtM.setText(textoPrevio);
