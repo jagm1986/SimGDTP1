@@ -2,16 +2,16 @@ package Metodos;
 
 public class MetodoMixto extends MetodoGeneracionRND 
 {
-    public MetodoMixto(int x0Ingresado)
+    public MetodoMixto(long x0Ingresado)
     {
         super(x0Ingresado);
     }
     
-    public double generarNumeroAleatorio(int a, int c, int m) 
+    public double generarNumeroAleatorio(long a, long c, long m) 
     {
-        int aXi = (a*xi);
+        long aXi = (a*xi);
                 
-        int xsiguiente = ((aXi + c) % m);
+        long xsiguiente = ((aXi + c) % m);
         double resultado = 0;
             
 

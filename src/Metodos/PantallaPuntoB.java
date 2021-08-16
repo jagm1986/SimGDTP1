@@ -57,11 +57,6 @@ public class PantallaPuntoB extends javax.swing.JFrame {
         for (int i = 0; i < cantIntervalos; i++) {
             Intervalo aux = new Intervalo(yi, yi + (1f / (float) cantIntervalos), frecuenciaEsperadaPorIntervalo);
 
-            /*if (i == 14)
-            {
-                double aux2 = 1.1;
-                aux = new Intervalo(yi, aux2 , frecuenciaEsperadaPorIntervalo);
-            }*/
             
             filasTabla.add(aux);
   
@@ -178,7 +173,7 @@ public class PantallaPuntoB extends javax.swing.JFrame {
             }
         });
 
-        cmbSignificancia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0.001", "0.0025", "0.90", "0.95", "0.975", "0.99", "0.995" }));
+        cmbSignificancia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0.90", "0.95", "0.975", "0.99", "0.995" }));
         cmbSignificancia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbSignificanciaActionPerformed(evt);
@@ -316,7 +311,7 @@ public class PantallaPuntoB extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 453, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 398, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -379,11 +374,7 @@ public class PantallaPuntoB extends javax.swing.JFrame {
             numerosGenerados.add(Math.random());
         }
         
-       /* if(Integer.parseInt(txtNumeroGeneraciones.getText())< Integer.parseInt(txtIntervalos.getText())){
-        JOptionPane.showMessageDialog(new JFrame(), "El valor de 'n' no puede ser menor a el numero de intervalos", "Parámetro incorrecto", JOptionPane.WARNING_MESSAGE);
-                txtNumeroGeneraciones.requestFocus();
-                return;
-        }*/
+       
         
         for (int i = 0; i < numerosGenerados.size(); i++) {
             rnd = numerosGenerados.get(i);
