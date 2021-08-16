@@ -50,11 +50,10 @@ public class TablaNumeros extends AbstractTableModel
                     res =""+ (rowIndex +1);
                     break;
                 case 1:
-                    res =""+ aux;
+                    res =""+ String.format("%.4f", aux);
                     break;
-                
-                
             }
+            
             
         }
         return res;
