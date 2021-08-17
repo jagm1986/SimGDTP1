@@ -117,7 +117,7 @@ public class PantallaPuntoB extends javax.swing.JFrame {
         tablaNumerosGenerados = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Punto A");
+        setTitle("Punto B");
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -126,6 +126,14 @@ public class PantallaPuntoB extends javax.swing.JFrame {
         txtNumeroGeneraciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNumeroGeneracionesActionPerformed(evt);
+            }
+        });
+        txtNumeroGeneraciones.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtNumeroGeneracionesKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNumeroGeneracionesKeyTyped(evt);
             }
         });
 
@@ -192,6 +200,11 @@ public class PantallaPuntoB extends javax.swing.JFrame {
                 txtIntervalosActionPerformed(evt);
             }
         });
+        txtIntervalos.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtIntervalosKeyTyped(evt);
+            }
+        });
 
         jLabel3.setText("Intervalo:");
 
@@ -245,6 +258,7 @@ public class PantallaPuntoB extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
+
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(lblResultadoPrueba, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -273,20 +287,25 @@ public class PantallaPuntoB extends javax.swing.JFrame {
                                 .addComponent(txtIntervalos, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGap(18, 18, 18)
+
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
+
+
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+
                         .addGap(22, 22, 22)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txtNumeroGeneraciones, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2)
                             .addComponent(jLabel3)
                             .addComponent(txtIntervalos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnGraficar)
@@ -301,8 +320,9 @@ public class PantallaPuntoB extends javax.swing.JFrame {
                     .addComponent(btnPruebaJi)
                     .addComponent(cmbSignificancia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+
                 .addComponent(lblResultadoPrueba, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(433, 433, 433))
+                .addContainerGap(36, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -314,8 +334,10 @@ public class PantallaPuntoB extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 453, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
+
         );
 
         pack();
@@ -454,6 +476,29 @@ public class PantallaPuntoB extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtIntervalosActionPerformed
 
+    private void txtNumeroGeneracionesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNumeroGeneracionesKeyTyped
+        // TODO add your handling code here:
+         String textoPrevio = txtNumeroGeneraciones.getText();
+        char caracterIngresado = evt.getKeyChar();
+        if (!Character.isDigit(caracterIngresado)) {
+            evt.consume();
+            txtNumeroGeneraciones.setText(textoPrevio);
+        }
+    }//GEN-LAST:event_txtNumeroGeneracionesKeyTyped
+
+    private void txtNumeroGeneracionesKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNumeroGeneracionesKeyReleased
+        // TODO add your hndling code here:
+    }//GEN-LAST:event_txtNumeroGeneracionesKeyReleased
+
+    private void txtIntervalosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIntervalosKeyTyped
+        // TODO add your handling code here:
+         String textoPrevio = txtIntervalos.getText();
+        char caracterIngresado = evt.getKeyChar();
+        if (!Character.isDigit(caracterIngresado)) {
+            evt.consume();
+            txtIntervalos.setText(textoPrevio);
+    }//GEN-LAST:event_txtIntervalosKeyTyped
+    }
     /**
      * @param args the command line arguments
      */
