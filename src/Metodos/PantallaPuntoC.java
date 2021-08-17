@@ -125,7 +125,7 @@ public class PantallaPuntoC extends javax.swing.JFrame {
         txtC = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Punto A");
+        setTitle("Punto C");
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -134,6 +134,11 @@ public class PantallaPuntoC extends javax.swing.JFrame {
         txtNumeroGeneraciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNumeroGeneracionesActionPerformed(evt);
+            }
+        });
+        txtNumeroGeneraciones.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNumeroGeneracionesKeyTyped(evt);
             }
         });
 
@@ -198,6 +203,11 @@ public class PantallaPuntoC extends javax.swing.JFrame {
         txtIntervalos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtIntervalosActionPerformed(evt);
+            }
+        });
+        txtIntervalos.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtIntervalosKeyTyped(evt);
             }
         });
 
@@ -333,6 +343,7 @@ public class PantallaPuntoC extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(jLabel2)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+
                                     .addComponent(txtNumeroGeneraciones, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -343,6 +354,7 @@ public class PantallaPuntoC extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(50, 50, 50)
                         .addComponent(lblResultadoPrueba, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)))
+
                 .addContainerGap(24, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -383,9 +395,11 @@ public class PantallaPuntoC extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnPruebaJi)
                     .addComponent(cmbSignificancia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblResultadoPrueba, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
+
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -398,7 +412,9 @@ public class PantallaPuntoC extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 580, Short.MAX_VALUE)
+
         );
 
         pack();
@@ -627,6 +643,7 @@ public class PantallaPuntoC extends javax.swing.JFrame {
 
     private void txtAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_txtAActionPerformed
 
     private void txtAKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAKeyTyped
@@ -664,6 +681,26 @@ public class PantallaPuntoC extends javax.swing.JFrame {
             txtC.setText(textoPrevio);
         }
     }//GEN-LAST:event_txtCKeyTyped
+
+    private void txtNumeroGeneracionesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNumeroGeneracionesKeyTyped
+        // TODO add your handling code here:
+        String textoPrevio = txtNumeroGeneraciones.getText();
+        char caracterIngresado = evt.getKeyChar();
+        if (!Character.isDigit(caracterIngresado)) {
+            evt.consume();
+            txtNumeroGeneraciones.setText(textoPrevio);
+        }
+    }//GEN-LAST:event_txtNumeroGeneracionesKeyTyped
+
+    private void txtIntervalosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtIntervalosKeyTyped
+        // TODO add your handling code here:
+        String textoPrevio = txtIntervalos.getText();
+        char caracterIngresado = evt.getKeyChar();
+        if (!Character.isDigit(caracterIngresado)) {
+            evt.consume();
+            txtIntervalos.setText(textoPrevio);
+        }
+    }//GEN-LAST:event_txtIntervalosKeyTyped
 
     /**
      * @param args the command line arguments
