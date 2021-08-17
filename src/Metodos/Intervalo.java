@@ -58,7 +58,7 @@ public class Intervalo
     {
         double numerador = Math.pow((double)(frecuenciaEsperada - frecuenciaObservada),2);
         double resultado = numerador / (double) frecuenciaEsperada;
-        
+        resultado =  (double) Math.round(resultado * 10000d) / 10000d;
         if(frecuenciaEsperada == 0) resultado = 0;
         
         valorEstadistico = resultado;
